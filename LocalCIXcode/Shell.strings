@@ -8,8 +8,8 @@
 API_TOKEN="98947c3fa6c558b824cf129349013ec8_MTE5MTA2NzIwMTMtMDctMjMgMjE6NTM6MzMuNDY5NzIw"
 TEAM_TOKEN="d7fed9eae4991bd2d3e0d10177ef084e_MzI4OTI5MjAxNC0wMi0xMCAyMzowODowNS4wMDgwMDE"
 DISTRIBUTION_LISTS="Soa Nguyen"
-PROVISIONING_PROFILE="/Users/jin/Downloads/cer/tpluz.corp/6VAV933EN5_iOS_Team_Provisioning_Profile_texodesigncomLocalCIXcode.mobileprovision"
-#PROVISIONING_PROFILE="/Library/Server/Xcode/Data/ProvisioningProfiles/6VAV933EN5_iOS_Team_Provisioning_Profile_texodesigncomLocalCIXcode.mobileprovision"
+#PROVISIONING_PROFILE="/Users/jin/Downloads/cer/tpluz.corp/6VAV933EN5_iOS_Team_Provisioning_Profile_texodesigncomLocalCIXcode.mobileprovision"
+PROVISIONING_PROFILE="/Library/Server/Xcode/Data/ProvisioningProfiles/6VAV933EN5_iOS_Team_Provisioning_Profile_texodesigncomLocalCIXcode.mobileprovision"
 #EXAMPLE:"/Library/Server/Xcode/Data/ProvisioningProfiles/DocLink_InHouse_2013.mobileprovision"
 
 SIGNING_IDENTITY="iPhone Developer: Tran Vinh Tuong (W7R97U6KMJ)"
