@@ -4,7 +4,7 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
-		<key>LocalCIXcode.xcscheme</key>
+		<key>LocalCIXcode.xcscheme_^#shared#^_</key>
 		<dict>
 			<key>orderHint</key>
 			<integer>0</integer>
@@ -18,6 +18,11 @@
 			<true/>
 		</dict>
 		<key>3C427EC718A9CAC2006D8A8B</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>3C7F073C18A9D4D50089C191</key>
 		<dict>
 			<key>primary</key>
 			<true/>
