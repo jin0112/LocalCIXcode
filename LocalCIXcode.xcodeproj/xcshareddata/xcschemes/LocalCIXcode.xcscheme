@@ -87,7 +87,7 @@
       </BuildableProductRunnable>
    </ProfileAction>
    <AnalyzeAction
-      buildConfiguration = "Debug">
+      buildConfiguration = "Testflight">
    </AnalyzeAction>
    <ArchiveAction
       buildConfiguration = "Testflight"
