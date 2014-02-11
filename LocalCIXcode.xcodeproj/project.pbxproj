@@ -199,6 +199,9 @@
 				LastUpgradeCheck = 0500;
 				ORGANIZATIONNAME = Jin;
 				TargetAttributes = {
+					3C427EA618A9CAC1006D8A8B = {
+						DevelopmentTeam = 6VAV933EN5;
+					};
 					3C427EC718A9CAC2006D8A8B = {
 						TestTargetID = 3C427EA618A9CAC1006D8A8B;
 					};
@@ -378,10 +381,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer: Tran Vinh Tuong (W7R97U6KMJ)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Tran Vinh Tuong (W7R97U6KMJ)";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "LocalCIXcode/LocalCIXcode-Prefix.pch";
 				INFOPLIST_FILE = "LocalCIXcode/LocalCIXcode-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "04E0AD12-0809-4A78-841E-69F270AB4AA8";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -391,10 +397,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer: Tran Vinh Tuong (W7R97U6KMJ)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Tran Vinh Tuong (W7R97U6KMJ)";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "LocalCIXcode/LocalCIXcode-Prefix.pch";
 				INFOPLIST_FILE = "LocalCIXcode/LocalCIXcode-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "04E0AD12-0809-4A78-841E-69F270AB4AA8";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
@@ -460,6 +469,7 @@
 				3C427EDB18A9CAC2006D8A8B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		3C427EDC18A9CAC2006D8A8B /* Build configuration list for PBXNativeTarget "LocalCIXcodeTests" */ = {
 			isa = XCConfigurationList;
@@ -468,6 +478,7 @@
 				3C427EDE18A9CAC2006D8A8B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
