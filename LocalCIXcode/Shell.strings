@@ -1,0 +1,55 @@
+#!/bin/bash
+#
+# (Above line comes out when placing in Xcode scheme)
+#
+# Valid and working as of 10/29/2013
+# Xcode 5.0.1, XCode Server
+#
+API_TOKEN="8472ea5b-1b0f-4df3-ab8b-0e1b7bbe7088"
+TEAM_TOKEN="d7fed9eae4991bd2d3e0d10177ef084e_MzI4OTI5MjAxNC0wMi0xMCAyMzowODowNS4wMDgwMDE"
+DISTRIBUTION_LISTS="Soa Nguyen"
+PROVISIONING_PROFILE="/Library/Server/Xcode/Data/ProvisioningProfiles/6VAV933EN5_iOS_Team_Provisioning_Profile_texodesigncomLocalCIXcode.mobileprovision"
+#EXAMPLE:"/Library/Server/Xcode/Data/ProvisioningProfiles/DocLink_InHouse_2013.mobileprovision"
+
+SIGNING_IDENTITY="iPhone Developer: Tran Vinh Tuong (W7R97U6KMJ)"
+#EXAMPLE:"iPhone Distribution: Unwired Revolution, LLC."
+
+# DO NOT EDIT BELOW HERE!
+########################################
+DSYM="/tmp/Archive.xcarchive/dSYMs/${PRODUCT_NAME}.app.dSYM"
+
+IPA="/tmp/${PRODUCT_NAME}.ipa"
+
+APP="/tmp/Archive.xcarchive/Products/Applications/${PRODUCT_NAME}.app"
+
+# Clear out any old copies of the Archive
+echo "Removing old Archive files from /tmp...";
+/bin/rm -rf /tmp/Archive.xcarchive*
+
+#Copy over the latest build the bot just created
+echo "Copying latest Archive to /tmp/...";
+LATESTBUILD=$(ls -1rt /Library/Server/Xcode/Data/BotRuns | tail -1)
+/bin/cp -Rp "/Library/Server/Xcode/Data/BotRuns/${LATESTBUILD}/output/Archive.xcarchive" "/tmp/"
+
+echo "Creating .ipa for ${PRODUCT_NAME}"
+/bin/rm "${IPA}"
+/usr/bin/xcrun -sdk iphoneos PackageApplication -v "${APP}" -o "${IPA}" --sign "${SIGNING_IDENTITY}" --embed "${PROVISIONING_PROFILE}"
+
+echo "Done with IPA creation."
+
+echo "Zipping .dSYM for ${PRODUCT_NAME}"
+/bin/rm "${DSYM}.zip"
+/usr/bin/zip -r "${DSYM}.zip" "${DSYM}"
+
+echo "Created .dSYM for ${PRODUCT_NAME}"
+
+echo "*** Uploading ${PRODUCT_NAME} to TestFlight ***"
+/usr/bin/curl "http://testflightapp.com/api/builds.json" \
+-F file=@"${IPA}" \
+-F dsym=@"${DSYM}.zip" \
+-F api_token="${API_TOKEN}" \
+-F team_token="${TEAM_TOKEN}" \
+-F distribution_lists="${DISTRIBUTION_LISTS}" \
+-F notes="Build uploaded automatically from Xcode Server Bot."
+
+echo "TestFlight upload finished!"
