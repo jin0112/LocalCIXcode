@@ -21,7 +21,6 @@
 		3C427ECC18A9CAC2006D8A8B /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3C427EAE18A9CAC2006D8A8B /* UIKit.framework */; };
 		3C427ED418A9CAC2006D8A8B /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 3C427ED218A9CAC2006D8A8B /* InfoPlist.strings */; };
 		3C427ED618A9CAC2006D8A8B /* LocalCIXcodeTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C427ED518A9CAC2006D8A8B /* LocalCIXcodeTests.m */; };
-		3C96B05218AA021600EF7D0B /* Shell.strings in Resources */ = {isa = PBXBuildFile; fileRef = 3C96B05118AA021600EF7D0B /* Shell.strings */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -235,7 +234,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				3C427EC318A9CAC2006D8A8B /* Images.xcassets in Resources */,
-				3C96B05218AA021600EF7D0B /* Shell.strings in Resources */,
 				3C427EB518A9CAC2006D8A8B /* InfoPlist.strings in Resources */,
 				3C427EBE18A9CAC2006D8A8B /* Main.storyboard in Resources */,
 			);
