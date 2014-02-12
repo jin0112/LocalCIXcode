@@ -19,7 +19,8 @@ SIGNING_IDENTITY="iPhone Developer: Tran Vinh Tuong (W7R97U6KMJ)"
 ########################################
 DSYM="/tmp/Archive.xcarchive/dSYMs/${PRODUCT_NAME}.app.dSYM"
 
-IPA="/tmp/${PRODUCT_NAME}.ipa"
+IPA="/tmp/Archive.xcarchive/Products/Applications/${PRODUCT_NAME}.ipa"
+#IPA="/tmp/${PRODUCT_NAME}.ipa"
 
 APP="/tmp/Archive.xcarchive/Products/Applications/${PRODUCT_NAME}.app"
 
