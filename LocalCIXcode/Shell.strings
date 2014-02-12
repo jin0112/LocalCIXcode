@@ -32,7 +32,7 @@ echo "Copying latest Archive to /tmp/...";
 LATESTBUILD=$(ls -1rt /Library/Server/Xcode/Data/BotRuns | tail -1)
 /bin/cp -Rp "/Library/Server/Xcode/Data/BotRuns/${LATESTBUILD}/output/Archive.xcarchive" "/tmp/"
 
-echo "Creating .ipa for ${PRODUCT_NAME}"
+echo "Creating .ipa named ${PRODUCT_NAME}"
 /bin/rm "${IPA}"
 /usr/bin/xcrun -sdk iphoneos PackageApplication -v "${APP}" -o "${IPA}" --sign "${SIGNING_IDENTITY}" --embed "${PROVISIONING_PROFILE}"
 
